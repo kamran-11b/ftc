@@ -1,0 +1,959 @@
+/* FONT AWESOME ICONS & GOGOLE FONT */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --color-topbar: #042b58;
+    --color-primary: #003169;
+    --color-secondary: #767676;
+    --color-universel: #fff;
+    --color-section: #F2F2FD;
+    --title-highlight: #097BFF;
+    --section-color: #F4F4F4;
+    --progress-bg: #D9D9D9;
+    --icon-small: 1.3rem;
+    --title-font: 'Montserrat', sans-serif;
+    --title-font-lg: 4rem;
+    --desc-font: 'Roboto', sans-serif;
+    --font-small: 1.4rem;
+    --card-border: #E1E1E1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.25%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--desc-font);
+    position: relative;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section__bg {
+    background-color: var(--section-color);
+}
+
+.center__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.stop__scrole {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------
+            STYLE FOR HEADER  
+--------------------------------------*/
+/* --------- TOPBAR START --------- */
+.topbar {
+    background-color: var(--color-topbar);
+    align-items: center;
+    display: none;
+    height: 4rem;
+}
+
+.topbar__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__left--topbar {
+    display: flex;
+    gap: 2rem;
+    color: var(--color-universel);
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.topbar__item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    color: var(--color-universel);
+}
+
+.content__right--topbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.topbar__social {
+    color: var(--color-universel);
+}
+
+/* --------- BRANDING START --------- */
+.barnd {
+    background-color: var(--color-universel);
+}
+
+.brand__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7rem;
+}
+
+.brand__image {
+    width: 30rem;
+    max-width: 30rem;
+    margin: auto;
+}
+
+.brand__links {
+    color: var(--color-primary);
+    display: none;
+}
+
+.links__whatsapp {
+    margin-bottom: .5rem;
+}
+
+/* --------- NAVBAR START --------- */
+.navbar {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary);
+    position: relative;
+}
+
+.navbar__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__list {
+    display: none;
+    list-style-type: none;
+}
+
+.list__item--navbar {
+    position: relative;
+    padding: 1rem 1.5rem;
+    border-right: .1rem solid rgba(255, 255, 255, 0.103);
+}
+
+.list__link--navbar,
+.list__link--sidebar {
+    color: var(--color-universel);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.list__link--navbar:hover .list__link--dropdown {
+    background-color: green;
+}
+
+
+.dropdown {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: calc(100% + 100px);
+    text-align: center;
+    background-color: var(--color-primary);
+    border-top: .1rem solid var(--card-border);
+    transform-origin: top;
+    transform: translateX(-55%) scaleY(0);
+    transition: .2s;
+}
+
+.dropdown__list {
+    list-style: none;
+}
+
+.dropdown__icon {
+    margin-left: 2rem;
+}
+
+.list__link--dropdown {
+    color: var(--color-universel);
+    text-decoration: none;
+    border-bottom: .1rem solid var(--card-border);
+    padding: 1rem;
+    display: block;
+}
+
+.list__item--navbar:hover .dropdown {
+    transform: translateX(-55%) scaleY(1);
+}
+
+.navbar__sidebar {
+    position: absolute;
+    background-color: var(--color-primary);
+    top: 100%;
+    right: 0;
+    border-top: .1rem solid var(--color-universel);
+    height: calc(100vh - 11rem);
+    width: 80%;
+    transform: scaleX(0);
+    transition: .2s;
+    transform-origin: right;
+    z-index: 99;
+}
+
+/* --------- SIDEBAR START --------- */
+.sidebar__heading {
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+}
+
+.sidebar__list {
+    list-style: none;
+}
+
+.list__item--sidebar {
+    color: white;
+    width: 100%;
+}
+
+.list__link--sidebar {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.list__item--sidebar.dropdown__added {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.list__item--sidebar.dropdown__added:hover .sublist__sidebar {
+    display: block;
+}
+
+.sublist__sidebar {
+    display: none;
+    margin-top: 1rem;
+    list-style: none;
+    list-style: none;
+}
+
+.sublist__item {
+    list-style: none;
+}
+
+.sublist__link {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+    width: 100%;
+    display: block;
+    padding: 1rem;
+    background-color: #012247;
+}
+
+.hamburger {
+    font-size: 2rem;
+    color: var(--color-universel);
+    border: 0;
+    background-color: transparent;
+}
+
+/* --------- CARUSAL START --------- */
+.carusal {
+    background: linear-gradient(rgba(4, 10, 87, 0.5), rgba(5, 31, 70, 0.5)),
+        url('../img/header/university.jpeg');
+    background-position: center top;
+    height: calc(100vh - 11rem);
+    display: flex;
+    align-items: center;
+}
+
+.carusalContent {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.carusel__button {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--color-primary);
+    color: var(--color-universel);
+    font-size: 1.7rem;
+    border-radius: 1rem;
+    padding: 1rem 3rem;
+    display: inline-block;
+    margin-top: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.315);
+}
+
+.swiper3 {
+    width: 100%;
+}
+
+.swiper4 {
+    display: block;
+}
+
+/* ---------------------------------------------
+            SECTION - CHOOSE COUNTRY 
+--------------------------------------*/
+/* --------- SECTION HEADER --------- */
+.sectoin__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section__title {
+    margin: .5rem 0;
+    font-family: var(--title-font);
+    color: var(--color-primary);
+}
+
+.section__desc {
+    padding: 0 2rem;
+    margin-top: 1rem;
+    font-family: var(--desc-font);
+    font-size: var(--font-small);
+    color: var(--color-secondary);
+}
+
+.header__devider {
+    height: 4rem;
+    width: .5rem;
+    background-color: var(--card-border);
+    margin: 0 2rem;
+    display: none;
+}
+
+.header__devider__sm {
+    color: var(--color-primary);
+}
+
+.header__devider__sm::after,
+.header__devider__sm::before {
+    content: "";
+    height: .2rem;
+    width: 5rem;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: var(--color-primary);
+}
+
+.devider__icon {
+    margin: 0 2rem;
+}
+
+.section__cardHolder {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    position: relative;
+}
+
+/* .cardHolder--chooseCountry {
+    height: 50rem;
+    overflow: hidden;
+} */
+
+.card1 {
+    border: 1px solid var(--card-border);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.card1__flag {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.card1__title {
+    font-family: var(--title-font);
+    color: var(--color-primary);
+}
+
+.card1__desc,
+.card1__button {
+    font-family: var(--desc-font);
+    font-size: var(--font-small);
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+.card__button {
+    font-family: var(--desc-font);
+}
+
+/* .shadow {
+    position: absolute;
+    background-color: green;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    height: 20rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgb(255, 255, 255) 39%, rgba(0, 212, 255, 0) 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.shadow__button {
+    text-decoration: none;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    font-weight: bold;
+    background-color: #6F6AF8;
+    color: var(--color-universel);
+    border-radius: 2rem;
+    transition: .5s;
+}
+
+.shadow__button:hover {
+    background-color: rgb(236, 236, 236);
+} */
+
+
+
+/* ---------------------------------------------
+            WHY CHOOSE FTC
+--------------------------------------*/
+.card2 {
+    border-radius: .5rem;
+    overflow: hidden;
+    background-color: var(--color-universel);
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 0.068);
+}
+
+.card2__image {
+    max-height: 20rem;
+
+}
+
+.image__card2 {
+    object-fit: cover;
+}
+
+.card2__contents {
+    padding: 3rem 2rem 2rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+}
+
+.card2__icon {
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-primary);
+}
+
+.card2__title {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+.card2__desc {
+    color: var(--color-secondary);
+}
+
+/* ---------------------------------------------
+            WHY WE ARE DIFFERENT
+--------------------------------------*/
+.section__content--different {
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
+}
+
+.section__title--v2 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.section__subtitle {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.left__content--different,
+.right__content--different {
+    flex: 3;
+}
+
+.right__content--different {
+    flex: 2;
+}
+
+
+.progressbar {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.progressbar__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title__item {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    font-family: var(--desc-font);
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.bars__item {
+    height: 2rem;
+    width: 100%;
+}
+
+.progressbar__bars {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bars__item {
+    position: relative;
+    height: 3.5rem;
+}
+
+
+.item__bg {
+    background-color: var(--progress-bg);
+    height: 100%;
+    flex: 1;
+
+}
+
+.item__progress {
+    width: 100%;
+    background-color: #003169;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    color: var(--color-universel);
+    font-weight: bold;
+}
+
+.item__progress.custom {
+    width: 87%;
+}
+
+.testimonial {
+    margin-top: 2rem;
+}
+
+.testimonial__card {
+    padding: 2rem;
+    border: 1px solid var(--card-border);
+}
+
+.testimonial__message {
+    color: var(--color-secondary);
+}
+
+.testimonial__message::before {
+    content: "\f10d";
+    font: var(--fa-font-solid);
+    font-size: 5rem;
+    color: var(--color-primary);
+    margin-right: 2rem;
+}
+
+.testimonial__person {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.person__name {
+    color: var(--color-primary);
+    font-size: 1.7rem;
+}
+
+.person__profession {
+    color: var(--color-secondary);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.person__image {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0.068);
+}
+
+.swiper2 {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.swiper3 {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    margin-bottom: 3rem;
+    width: 200px;
+}
+
+
+/* ---------------------------------------------
+            SECTION - WHY WE ARE DIFFRENTS
+--------------------------------------*/
+/* --------- SECTION HEADER --------- */
+
+
+
+
+
+/* ---------------------------------------------
+            SECTION - COUNTERS
+--------------------------------------*/
+.content__counters {
+    display: flex;
+    flex-direction: column;
+}
+
+.counters__item {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: var(--color-primary);
+}
+
+.item__image--counters {
+    font-size: 4rem;
+    padding: 2rem;
+}
+
+.counter__number {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------
+            OUR STAFF SECITON START
+--------------------------------------*/
+.card3 {
+    background: linear-gradient(rgba(1, 4, 36, 0.144), rgba(2, 15, 34, 0.192)),
+        url('../img/student/student__1.jpeg');
+    height: 30rem;
+    background-size: cover;
+    border-radius: .5rem;
+    background-position: center;
+    position: relative;
+    transition: .5s;
+}
+
+.card3__image {
+    width: 100%;
+    height: 100%;
+}
+
+.card3__content {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    margin: 1rem;
+    transition: .5s;
+}
+
+.card3__text--profession::after {
+    content: "";
+    height: .5rem;
+    width: 10rem;
+    background-color: var(--color-universel);
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.card3:hover {
+    background: linear-gradient(rgba(1, 4, 36, 0), rgba(2, 15, 34, 0.034)), url('../img/student/student__1.jpeg');
+    background-size: cover;
+    background-position: top;
+}
+
+.card3:hover .card3__content {
+    transform: translateY(110%);
+}
+
+/* ---------------------------------------------
+            SECTION - COMPANYIS
+--------------------------------------*/
+.university {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.company--box {
+    padding: 2rem;
+}
+
+
+
+
+/* ---------------------------------------------
+            SECTION - WHY WE ARE DIFFRENTS
+--------------------------------------*/
+/* --------- SECTION HEADER --------- */
+.footer {
+    background-color: var(--color-primary);
+    padding: 5rem 0 0 0;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.content--footer {
+    /* border: 1px solid red; */
+    flex-grow: 1;
+    flex: 1;
+    color: var(--color-universel);
+}
+
+.footer__logo {
+    height: 100px;
+    padding: 0rem 3rem;
+}
+
+.social__links {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.footer__title {
+    color: var(--color-universel);
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.footer__subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.footer__subcontent__holer {
+    margin-bottom: 4rem;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.links a {
+    color: var(--color-universel);
+}
+
+.footer__form {
+    margin-top: 3rem;
+}
+
+.form__input--footerform {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.171);
+    height: 50px;
+    color: var(--color-universel);
+    padding-left: 2rem;
+}
+
+.copyright__section {
+    text-align: center;
+    color: var(--color-universel);
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.116);
+}
+
+/* -------------------------------------------------------------------
+                            ABOUT PAGE START
+------------------------------------------------------------------- */
+
+.page__banner {
+    background-color: var(--color-secondary);
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner__title {
+    font-size: 4rem;
+}
+
+/* -------------------------------------------------------------------
+                            ABOUT PAGE START
+------------------------------------------------------------------- */
+.contact__information {
+    margin: 5rem 0;
+}
+
+.contact__contact {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.contact__card {
+    height: 10rem;
+    flex-grow: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+    border: 1px solid var(--card-border);
+}
+
+.card__rightside p {
+    margin-top: .5rem;
+}
+
+.section__content--details {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    flex-direction: column;
+}
+
+
+.link__box {
+    border: 1px solid var(--card-border);
+    width: 100%;
+}
+
+.quick__links {
+    flex: 2;
+}
+
+.section__content--main {
+    flex: 5;
+}
+
+.link__item--quickLink {
+    width: 100%;
+    list-style: none;
+}
+
+.link__item--quickLink.header {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-universel);
+    padding-left: 3rem;
+    font-weight: bold;
+}
+
+.link__item--quickLink {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    font-weight: bold;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.link__item--quickLink a {
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.section__ptitle {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+}
+
+.section__pdesc {
+    margin-bottom: 2rem;
+    color: var(--color-secondary);
+}
+
+
+
+/* -------------------------------------------------------------------
+                            University PAGE START
+------------------------------------------------------------------- */
+.page__banner.uk {
+    background: linear-gradient(rgba(23, 66, 146, 0.05), rgba(34, 133, 75, 0.05)),
+        url('../img/banner/word__map.svg');
+    background-size: contain;
+    background-position: center;
+}
+
+.page__banner.country {
+    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
+        url('../img/banner/word__map.svg');
+    background-size: contain;
+    background-position: center;
+}

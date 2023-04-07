@@ -1,0 +1,128 @@
+@media only screen and (min-width: 768px) {
+
+    .section {
+        padding: 10rem 0;
+    }
+
+    /* -------------------------------------*/
+    /* TOPBAR START  */
+    /*---------------------------------------- */
+    .topbar {
+        display: flex;
+    }
+
+
+
+
+    /* -------------------------------------*/
+    /* NAVBAR START  */
+    /*---------------------------------------- */
+    .brand__links {
+        display: block;
+    }
+
+    .brand__image {
+        margin: 0;
+    }
+
+    .navbar__list {
+        display: flex;
+    }
+
+    .topbar__item--innavbar,
+    .hamburger {
+        display: none;
+    }
+
+
+    /* -------------------------------------*/
+    /* CHOOSE COUNTRY START  */
+    /*---------------------------------------- */
+
+    .section__cardHolder {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .sectoin__header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .section__title {
+        font-size: 4rem;
+        white-space: nowrap;
+    }
+
+    .section__desc {
+        font-size: 1.6rem;
+        text-align: left;
+        margin: 0;
+    }
+
+    .header__devider__sm {
+        display: none;
+    }
+
+    .header__devider {
+        display: block;
+    }
+
+
+
+    .section__content--different {
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .section__title--v2 {
+        font-size: 3rem;
+    }
+
+
+
+
+    /* -------------------------------------*/
+    /* OUR STAFF SECTION START */
+    /*---------------------------------------- */
+    .cardHolder--staff {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4rem;
+    }
+
+
+    .footer__content {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .contact__contact {
+        flex-direction: row;
+    }
+
+    .contact__card {
+        justify-content: center;
+    }
+
+    .section__content--details {
+        flex-direction: row;
+    }
+
+    .carusel__title {
+        font-size: 6rem;
+        margin: 1rem 0;
+    }
+
+    .carusel__welcome {
+        font-size: 3rem;
+    }
+
+    .carusel__subtitle {
+        font-size: 2rem;
+    }
+
+    .content__counters {
+        flex-direction: row;
+        align-items: auto;
+    }
+}
