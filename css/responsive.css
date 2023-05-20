@@ -1,128 +1,186 @@
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 600px) {
 
-    .section {
-        padding: 10rem 0;
-    }
-
-    /* -------------------------------------*/
     /* TOPBAR START  */
-    /*---------------------------------------- */
     .topbar {
-        display: flex;
-    }
-
-
-
-
-    /* -------------------------------------*/
-    /* NAVBAR START  */
-    /*---------------------------------------- */
-    .brand__links {
-        display: block;
-    }
-
-    .brand__image {
-        margin: 0;
-    }
-
-    .navbar__list {
-        display: flex;
-    }
-
-    .topbar__item--innavbar,
-    .hamburger {
         display: none;
     }
 
-
-    /* -------------------------------------*/
-    /* CHOOSE COUNTRY START  */
-    /*---------------------------------------- */
-
-    .section__cardHolder {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-
-    .sectoin__header {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .section__title {
-        font-size: 4rem;
-        white-space: nowrap;
-    }
-
-    .section__desc {
-        font-size: 1.6rem;
-        text-align: left;
-        margin: 0;
-    }
-
-    .header__devider__sm {
-        display: none;
-    }
-
-    .header__devider {
-        display: block;
-    }
-
-
-
-    .section__content--different {
-        flex-direction: row;
-        gap: 5rem;
-    }
-
-    .section__title--v2 {
-        font-size: 3rem;
-    }
-
-
-
-
-    /* -------------------------------------*/
-    /* OUR STAFF SECTION START */
-    /*---------------------------------------- */
-    .cardHolder--staff {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 4rem;
-    }
-
-
-    .footer__content {
-        flex-direction: row;
-        gap: 2rem;
-    }
-
-    .contact__contact {
-        flex-direction: row;
-    }
-
-    .contact__card {
+    /* TITLBAR START  */
+    .titlebar__content {
         justify-content: center;
     }
 
-    .section__content--details {
-        flex-direction: row;
+    .titelbar__links {
+        display: none;
     }
 
-    .carusel__title {
+    /* NAVBAR START  */
+    .navbar {
+        display: none;
+    }
+
+    .subnav {
+        display: block;
+    }
+
+    /* HERO  START  */
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.89),
+                rgba(0, 0, 0, 0.7)), url(../img/banner/banner__2.jpeg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero__content {
+        padding: 0;
+    }
+
+    .hero__heading {
         font-size: 4rem;
-        margin: 1rem 0;
+        color: white;
     }
 
-    .carusel__welcome {
+    .hero__desc {
+        max-width: 100%;
+        color: white;
+        opacity: .8;
+    }
+
+
+    .hero\:avater__bg {
+        display: none;
+    }
+
+    .hero__avater {
+        display: none;
+    }
+
+    .hero\:link__icon {
+        color: var(--color-white) !important;
+    }
+
+    /* CARUSAL START  */
+    .swiper {
+        height: 40vh;
+    }
+
+    /* WELCOME START  */
+    .welcome__content {
+        padding: 5rem 0rem;
+        text-align: left;
+    }
+
+    .welcome__title {
         font-size: 3rem;
     }
 
-    .carusel__subtitle {
-        font-size: 2rem;
+    /* COUNTRY START  */
+    .country,
+    .whychooseftc {
+        padding: 3rem 0;
     }
 
-    .content__counters {
-        flex-direction: row;
-        align-items: auto;
+    .country\:card__holder,
+    .benefit\:card__holder {
+        grid-template-columns: 1fr;
+    }
+
+    .section__header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .header__title {
+        white-space: pre-wrap;
+        font-size: 3rem;
+    }
+
+    .header__devider {
+        display: none;
+    }
+
+    /* ACHIVEMENT START  */
+    .achivement__content {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    /* OUR TEAM START  */
+    .ourteam\:card {
+        height: 30rem;
+    }
+
+    /* BANNER START  */
+    .banner {
+        height: 20rem;
+        padding: 1rem;
+    }
+
+    .banner__title {
+        font-size: 3rem;
+    }
+
+    /* ABOUT PAGE START  */
+    .about {
+        margin-top: 4rem;
+    }
+
+    .about__title {
+        font-size: 3rem;
+    }
+
+    .about__title--md {
+        font-size: 2.5rem;
+    }
+
+    .about__list {
+        padding-left: 2rem;
+    }
+
+    .table {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .about\:image__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .staff__content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__boxes {
+        grid-template-columns: 1fr;
+    }
+
+    /* FOOTER  START  */
+    .footer__sections {
+        grid-template-columns: 1fr;
+    }
+
+    .footer\:section__one {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .footer\:section__two,
+    .footer\:section__three,
+    .footer\:section__four {
+        text-align: center;
+    }
+
+    .footer__logo {
+        max-height: 10rem;
+        max-width: 30rem;
+        margin: auto;
+    }
+
+    .footer__title {
+        margin-bottom: 2rem;
     }
 }

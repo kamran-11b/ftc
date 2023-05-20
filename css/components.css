@@ -1,0 +1,729 @@
+/* --------- TOPBAR START --------- */
+.topbar {
+    background-color: var(--color-primary--dark);
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    color: var(--color-white);
+}
+
+.topbar__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topbar\:content__left {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.topbar__item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.topbar\:content__right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.topbar__link {
+    color: var(--color-white);
+}
+
+
+/* --------- TITELBAR START --------- */
+.titlebar {
+    background-color: var(--color-white);
+}
+
+.titlebar__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7rem;
+}
+
+.titlebar__logo {
+    width: 30rem;
+}
+
+
+.links__whatsapp {
+    margin-bottom: .5rem;
+}
+
+/* --------- NAVBAR START ---------------  */
+.navbar {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.navbar\:list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar\:list__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar\:item__link {
+    color: var(--color-white);
+    padding: 1.5rem;
+    display: block;
+    text-decoration: none;
+}
+
+.navbar\:sublist {
+    position: absolute;
+    background-color: var(--color-primary);
+    top: 100%;
+    min-width: 20rem;
+    transition: .5s;
+    border-top: .3rem solid var(--color-primary--dark);
+    list-style: none;
+    display: none;
+    z-index: 5;
+}
+
+.navbar\:list__item.dropdown:hover .navbar\:sublist {
+    display: block;
+}
+
+.navbar\:sublist__item {
+    text-align: center;
+}
+
+.navbar\:sublist__item:not(:last-child) {
+    border-bottom: .1rem solid var(--color-white--transparent);
+}
+
+.navbar\:sublist__item:hover {
+    background-color: var(--color-primary--dark);
+}
+
+/* --------- SUBNAV START ---------------  */
+.subnav {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1.5rem;
+    position: relative;
+    display: none;
+}
+
+.subnav__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subnav\:text {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.subnav__hamburger {
+    font-size: 2rem;
+    background-color: transparent;
+    border: 0;
+    color: var(--color-white);
+}
+
+/* --------- popnav START ---------------  */
+.popnav {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 99;
+}
+
+.popnav__content {
+    font-size: 2.5rem;
+    color: white;
+    padding: 2rem;
+}
+
+.popnav__close {
+    background-color: var(--color-white--transparent);
+    border: 0;
+    border-radius: 1rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1.7rem;
+}
+
+.popnav__list {
+    list-style: none;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.popnav\:item__withIcon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popnav\:item__link {
+    color: rgb(151, 156, 158);
+    text-decoration: none;
+}
+
+.popnav\:item__link.main {
+    color: var(--color-white);
+}
+
+.popnav\:sublist {
+    list-style-position: inside;
+    padding: 1rem 0;
+    padding-left: 1rem;
+    display: none;
+}
+
+.popnav\:sublist__item {
+    padding: .5rem 0;
+}
+
+
+.popnav\:list__item:hover .popnav\:sublist {
+    display: block;
+}
+
+.popnav\:list__item:hover .popnav__icon {
+    rotate: 0deg;
+}
+
+.popnav__icon {
+    rotate: 90deg;
+    font-size: 1.5rem;
+}
+
+/* --------- WELCOME START ---------------  */
+.welcome__content {
+    padding: 10rem 3rem;
+    text-align: center;
+}
+
+.welcome__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-mdark);
+}
+
+.welcome__description {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color-text-sdark);
+    line-height: 2.5rem;
+    opacity: .8;
+
+}
+
+
+/* -------------SECTION HEADER----------  */
+
+.section__header {
+    display: flex;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 4rem;
+    white-space: nowrap;
+    position: relative;
+    color: var(--color-primary--light);
+}
+
+.header__devider {
+    height: 5rem;
+    width: .5rem;
+    background-color: var(--color-border);
+    margin: 0 3rem;
+    border-radius: .5rem;
+}
+
+.header__desc {
+    color: var(--color-text-mdark);
+    font-size: 1.6rem;
+}
+
+
+/* -------------COUNTRY START----------  */
+.country {
+    padding: 10rem 0;
+}
+
+.country\:card__holder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.country\:card {
+    text-align: center;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.country\:card__link {
+    text-decoration: none;
+    color: black;
+}
+
+.country\:card__flag {
+    height: 5rem;
+    width: 5rem;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.country\:card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.country\:card__title {
+    color: var(--color-primary--light);
+}
+
+.country\:card__desc {
+    font-size: 1.5rem;
+    color: var(--color-text-sdark);
+}
+
+.country\:card__readmore {
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    color: var(--color-primary--light);
+    font-weight: bold;
+}
+
+/* -------------WHY CHOOSE FTC START----------  */
+.benefit {
+    padding: 10rem 0;
+}
+
+
+/* --------- BANNER START ---------------  */
+.banner {
+    height: 40rem;
+    background-image: url(../img/banner/banner.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    color: white;
+}
+
+.banner__title {
+    background-color: var(--color-primary);
+    display: inline-block;
+    padding: 1rem;
+    font-size: 5rem;
+}
+
+/* --------- BREADCRUMB START ---------------  */
+.breadcrumb {
+    margin-top: 4rem;
+}
+
+.breadcrumb__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.breadcrumb__item:not(:last-child):after {
+    content: "/";
+    margin: 0 1rem;
+}
+
+.breadcrumb\:item__link {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+/* --------- CARUSAL START ---------------  */
+.hero__content {
+    height: 90vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hero__desc {
+    max-width: 40vw;
+}
+
+.hero__avater {
+    height: 40rem;
+    width: 35rem;
+    position: absolute;
+    bottom: 0;
+    right: 5rem;
+    z-index: 3;
+}
+
+.hero\:avater__bg {
+    position: absolute;
+    height: 50rem;
+    width: 50rem;
+    bottom: -40%;
+    right: 0;
+    z-index: 2;
+    background-color: var(--color-primary--light);
+    border-radius: 50%;
+}
+
+.hero__heading {
+    font-size: 5.5rem;
+    font-weight: bolder;
+    color: var(--color-text--dark);
+    margin-bottom: 1rem;
+}
+
+.hero__heading--highlight {
+    /* color: #717CFF; */
+    color: var(--color-primary--light);
+}
+
+.hero__desc {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--color-text-sdark);
+}
+
+.hero__button {
+    padding: 1rem 2rem;
+    background-color: var(--color-primary--light);
+    align-self: flex-start;
+    color: white;
+    font-family: var(--font-default);
+    text-decoration: none;
+    display: block;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.hero__button:hover {
+    background-color: var(--color-primary);
+}
+
+.hero__links {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+.hero\:link__icon:nth-child(1) {
+    color: #4267B2;
+}
+
+.hero\:link__icon:nth-child(2) {
+    color: #C13584;
+}
+
+.hero\:link__icon:nth-child(3) {
+    color: #1DA1F2;
+}
+
+
+
+
+/* .carusal\:bg__image {
+    filter: brightness(50%);
+    object-fit: cover;
+    object-position: top;
+} */
+
+/* .owl-two {
+    margin-top: 3rem;
+}
+
+.header__title.no__devider::after {
+    display: none;
+} */
+
+
+
+/* --------- WHY CHOOSE FTC START ---------------  */
+.benefit\:card__holder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.benefit\:card {
+    background-color: var(--color-white);
+    border-radius: .5rem;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.benefit\:header__image {
+    object-fit: cover;
+}
+
+.benefit\:card__content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    position: relative;
+    color: var(--color-text-mdark);
+}
+
+.benefit\:card__icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 6rem;
+    width: 6rem;
+    background-color: var(--color-white);
+    color: var(--color-primary--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    font-size: 3rem;
+}
+
+.benefit\:card__title {
+    margin-top: 1rem;
+    color: var(--color-primary--light);
+}
+
+/* --------- ACHIVEMENT SECTION START ---------------  */
+.achivement {
+    padding: 10rem 0;
+    color: var(--color-primary);
+}
+
+.achivement__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.achivement\:item {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.achivement\:item__icon {
+    font-size: 4.5rem;
+    width: 6rem;
+}
+
+.acrivement\:number {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+
+/* --------- OURTEAM START ---------------  */
+.ourteam {
+    padding: 10rem 0;
+}
+
+.ourteam\:member__holder {
+    margin-top: 3rem;
+}
+
+.ourteam\:card {
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.ourteam\:card__image {
+    object-fit: cover;
+    object-position: top;
+}
+
+.outteam\:card__content {
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1.5rem;
+    transition: .5s;
+}
+
+.outteam\:member {
+    font-size: 2.5rem;
+}
+
+.ourteam\:position {
+    font-size: 2rem;
+}
+
+.ourteam\:card:hover .outteam\:card__content {
+    left: 0;
+}
+
+.swiper__ourteam {
+    border: 1px solid red;
+}
+
+/* ---------  EVENT START ---------------  */
+.event {
+    padding: 10rem 0;
+}
+
+.event__slider {
+    margin-top: 3rem;
+}
+
+/* ---------  EVENT START ---------------  */
+.university {
+    padding: 5rem 0;
+}
+
+.university__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    width: 20rem;
+    padding: 2rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+}
+
+.university__logo img {
+    object-fit: contain;
+}
+
+/* --------- FOOTER START ---------------  */
+.footer {
+    background-color: var(--color-primary);
+    margin-top: 5rem;
+    padding-top: 4rem;
+    color: var(--color-white);
+}
+
+.footer__sections {
+    display: grid;
+    grid-template-columns: 5fr 5fr 5fr 5fr;
+    gap: 2.5rem;
+
+}
+
+.footer__logo {
+    height: 8rem;
+    width: 22rem;
+}
+
+.footer__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.footer\:icon__link {
+    color: var(--color-white);
+}
+
+.footer__title {
+    font-size: 2.5rem;
+    color: var(--color-white);
+    margin-bottom: 5rem;
+}
+
+.footer\:link__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+}
+
+.footer\:item__link {
+    color: var(--color-white);
+}
+
+.footer\:group__content {
+    color: var(--color-white);
+    margin-bottom: 2rem;
+}
+
+.footer__subtitle {
+    color: var(--color-white);
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer\:section__one {
+    margin-right: 5rem;
+}
+
+.footer\:form__input {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.171);
+    height: 50px;
+    color: var(--color-universel);
+    padding-left: 2rem;
+    color: var(--color-white);
+    margin-top: 2rem;
+}
+
+.footer__copyright {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-white--transparent);
+}
