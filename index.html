@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJECT FTC - FENANTIAL TRANING COLLEGE</title>
+    <script src="https://unpkg.com/vanilla-counter"></script>
     <link rel="stylesheet" href="css/vandor/owl.carousel.min.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
 
 </head>
 
@@ -533,7 +533,10 @@
                         <i class="fa-solid fa-calendar-days"></i>
                     </div>
                     <div class="achivement:item__text">
-                        <h4 class="acrivement:number">10+</h4>
+                        <h4 class="acrivement:number">
+                            <span data-vanilla-counter data-start-at="0" data-end-at="10" data-time="1000"
+                                data-delay="0" data-format="{}+"></span>
+                        </h4>
                         <p class="achivement:desc">Years of Exprience</p>
                     </div>
                 </div>
@@ -542,7 +545,10 @@
                         <i class="fa-solid fa-earth-americas"></i>
                     </div>
                     <div class="achivement:item__text">
-                        <h4 class="acrivement:number">18+</h4>
+                        <h4 class="acrivement:number">
+                            <span data-vanilla-counter data-start-at="0" data-end-at="18" data-time="1000"
+                                data-delay="0" data-format="{}+">
+                        </h4>
                         <p class="achivement:desc">Countries</p>
                     </div>
                 </div>
@@ -551,7 +557,8 @@
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
                     <div class="achivement:item__text">
-                        <h4 class="acrivement:number">100+</h4>
+                        <h4 class="acrivement:number"><span data-vanilla-counter data-start-at="0" data-end-at="2000"
+                                data-time="1000" data-delay="0" data-format="{}+"></h4>
                         <p class="achivement:desc">Univeristys</p>
                     </div>
                 </div>
@@ -560,7 +567,8 @@
                         <i class="fa-solid fa-trophy"></i>
                     </div>
                     <div class="achivement:item__text">
-                        <h4 class="acrivement:number">2000+</h4>
+                        <h4 class="acrivement:number"><span data-vanilla-counter data-start-at="0" data-end-at="18"
+                                data-time="1000" data-delay="0" data-format="{}+"></h4>
                         <p class="achivement:desc">Success Story</p>
                     </div>
                 </div>
@@ -780,9 +788,8 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./js/vandor/owl.carousel.min.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="./js/script.js"></script>
