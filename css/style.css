@@ -19,24 +19,6 @@
 
     --color-border: #ebebeb;
     --section-highlight: #FAFAFF;
-
-
-
-
-    /* --color-topbar: #042b58;
-    --color-primary: #003169;
-    --color-secondary: #767676;
-    --color-universel: #fff;
-    --color-section: #F2F2FD;
-    --title-highlight: #097BFF;
-    --section-color: #F4F4F4;
-    --progress-bg: #D9D9D9;
-    --icon-small: 1.3rem;
-    --title-font: 'Montserrat', sans-serif;
-    --title-font-lg: 4rem;
-    --desc-font: 'Roboto', sans-serif;
-    --font-small: 1.4rem;
-    --card-border: #E1E1E1; */
 }
 
 * {
@@ -77,6 +59,35 @@ img {
     font-size: 1.6rem;
     color: var(--color-text-sdark);
     line-height: 2.5rem;
+}
+
+.owl__button {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.418);
+    color: var(--color-white);
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.owl__button:hover {
+    opacity: 0.6;
+}
+
+
+.owl__previous {
+    right: 1.5rem;
+}
+
+.owl__next {
+    left: 1.5rem;
 }
 
 

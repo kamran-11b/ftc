@@ -568,6 +568,14 @@
     font-weight: bolder;
 }
 
+/* --------- TESTIMONIAL START ---------------  */
+.testimonial {
+    padding: 10rem 0;
+}
+
+.testimonial__content {
+    display: flex;
+}
 
 /* --------- OURTEAM START ---------------  */
 .ourteam {
@@ -576,10 +584,11 @@
 
 .ourteam\:member__holder {
     margin-top: 3rem;
+    position: relative;
 }
 
 .ourteam\:card {
-    height: 25rem;
+    height: 30rem;
     position: relative;
     overflow: hidden;
 
@@ -599,14 +608,15 @@
     color: white;
     padding: 1.5rem;
     transition: .5s;
+    text-align: center;
 }
 
 .outteam\:member {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .ourteam\:position {
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .ourteam\:card:hover .outteam\:card__content {
@@ -624,6 +634,7 @@
 
 .event__slider {
     margin-top: 3rem;
+    position: relative;
 }
 
 /* ---------  EVENT START ---------------  */
