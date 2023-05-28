@@ -79,6 +79,15 @@
     justify-content: center;
 }
 
+.navbar\:list__item:not(:last-child)::after {
+    content: "|";
+    opacity: .3;
+}
+
+.fa-chevron-down {
+    opacity: .6;
+}
+
 .navbar\:item__link {
     color: var(--color-white);
     padding: 1.5rem;
@@ -96,6 +105,12 @@
     list-style: none;
     display: none;
     z-index: 5;
+}
+
+.dropdown {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .navbar\:list__item.dropdown:hover .navbar\:sublist {
