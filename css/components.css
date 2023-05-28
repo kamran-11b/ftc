@@ -589,7 +589,15 @@
 }
 
 .testimonial__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.testimonial\:left,
+.testimonial\:right {
+    height: 40rem;
+    border: 1px solid red;
 }
 
 /* --------- OURTEAM START ---------------  */
