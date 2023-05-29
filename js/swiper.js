@@ -50,6 +50,16 @@ $(document).ready(function () {
         }
     });
 
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            items: 2,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 3000,
+        });
+    });
+
     var owl2 = $('.owl-two');
     var owl3 = $('.owl-three');
     owl2.owlCarousel();
@@ -63,6 +73,12 @@ $(document).ready(function () {
         owl3.trigger('next.owl.carousel');
     })
     $('.owl__previous__event').click(function () {
+        owl3.trigger('prev.owl.carousel', [300]);
+    })
+    $('.testimonial__next').click(function () {
+        owl3.trigger('next.owl.carousel');
+    })
+    $('.testimonial__previous').click(function () {
         owl3.trigger('prev.owl.carousel', [300]);
     })
 });
