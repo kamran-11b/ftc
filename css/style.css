@@ -257,3 +257,15 @@ img {
 .box__info {
     color: var(--color-text-mdark);
 }
+
+.uk_section>.uk_title{
+ margin-top: 15px;
+}
+
+.uk_section{
+    margin-left: 10px;
+}
+.uk_section p{
+    margin-left: 10px;
+    margin-top: 5px;
+}
