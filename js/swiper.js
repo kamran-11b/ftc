@@ -7,8 +7,9 @@ $(document).ready(function () {
         loop: true,
         autoplay: true,
         dots: true,
+        rtl: false,
         slideBy: 4,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 5000,
         responsive: {
             0: { //for width 0px and up
                 items: 1 //show only one item at a time
@@ -36,6 +37,7 @@ $(document).ready(function () {
         autoplay: true,
         autoplayTimeout: 3000,
         loop: true,
+        rtl: true,
         smartSpeed: 5000,
         responsive: {
             0: { //for width 0px and up
@@ -51,34 +53,64 @@ $(document).ready(function () {
     });
 
     $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
+        $(".owl-five").owlCarousel({
             loop: true,
             items: 2,
             margin: 10,
             autoplay: true,
             autoplayTimeout: 3000,
+            responsive: {
+                0: { //for width 0px and up
+                    items: 1 //show only one item at a time
+                },
+                600: { //for width 600px and up
+                    items: 2 //show 3 items at a time
+                },
+            }
+
+        });
+    });
+    $(document).ready(function () {
+        $(".owl-six").owlCarousel({
+            loop: true,
+            items: 3,
+            margin: 10,
+            autoplay: true,
+            rtl: true,
+            autoplayTimeout: 3000,
+            responsive: {
+                0: { //for width 0px and up
+                    items: 1 //show only one item at a time
+                },
+                600: { //for width 600px and up
+                    items: 2 //show 3 items at a time
+                },
+            }
+
         });
     });
 
     var owl2 = $('.owl-two');
     var owl3 = $('.owl-three');
+    var owl__success = $('.owl-five');
     owl2.owlCarousel();
-    $('.owl__next').click(function () {
+    $('.team__next').click(function () {
         owl2.trigger('next.owl.carousel');
     })
-    $('.owl__previous').click(function () {
+    $('.team__previous').click(function () {
         owl2.trigger('prev.owl.carousel', [300]);
     })
     $('.owl__next__event').click(function () {
         owl3.trigger('next.owl.carousel');
     })
+
     $('.owl__previous__event').click(function () {
         owl3.trigger('prev.owl.carousel', [300]);
     })
-    $('.testimonial__next').click(function () {
-        owl3.trigger('next.owl.carousel');
+    $('.success__next').click(function () {
+        owl__success.trigger('next.owl.carousel');
     })
-    $('.testimonial__previous').click(function () {
-        owl3.trigger('prev.owl.carousel', [300]);
+    $('.success__previous').click(function () {
+        owl__success.trigger('prev.owl.carousel', [300]);
     })
 });

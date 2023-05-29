@@ -155,12 +155,31 @@
         grid-template-columns: 1fr;
     }
 
-    .testimonial__content {
-        grid-template-columns: 1fr;
+    .testimonial__heading {
+        font-size: 3.4rem;
     }
 
-    .testimonial__sliders {
-        max-width: 400px;
+    .testimonial__heading::before {
+        font-size: 2rem;
+        left: -10px;
+    }
+
+    .testimonial__content {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .testimonial\:left,
+    .testimonial\:right {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+
+    .about__ftc {
+        grid-template-columns: 1fr;
     }
 
     /* FOOTER  START  */
