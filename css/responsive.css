@@ -157,11 +157,11 @@
 
     .testimonial__heading {
         font-size: 3.4rem;
+        text-indent: 0;
     }
 
     .testimonial__heading::before {
-        font-size: 2rem;
-        left: -10px;
+        display: none;
     }
 
     .testimonial__content {

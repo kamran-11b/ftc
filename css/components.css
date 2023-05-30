@@ -593,8 +593,6 @@
     padding: 10rem 0;
 }
 
-
-
 .testimonial\:left,
 .testimonial\:right {
     display: inline-block;
@@ -641,7 +639,7 @@
 
 .testimonial__desc {
     font-size: 1.8rem;
-    color: var(--color-text);
+    color: var(--color-text-mdark);
 }
 
 .testimonial\:sliders__item {

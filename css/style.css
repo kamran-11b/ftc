@@ -147,12 +147,12 @@ img {
     text-decoration: none;
 }
 
-.exam--support {
+.small-gap {
     margin-top: 2rem;
 }
 
-.exam--support .about\:list__item {
-    margin: 0;
+.small-gap .about\:list__item {
+    margin: 1rem;
 }
 
 .about__link {
