@@ -325,6 +325,8 @@
     height: 5rem;
     width: 5rem;
     margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
     margin-bottom: 1rem;
 }
 
@@ -788,11 +790,12 @@
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
+    transition: .3s;
     z-index: 2;
 }
 
 .grid__showmore:hover {
-    opacity: .8;
+    padding: 1.6rem 5rem;
 }
 
 .grid_shadow {

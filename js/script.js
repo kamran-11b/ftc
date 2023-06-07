@@ -4,6 +4,7 @@ const navCloseBtn = document.querySelector('.popnav__close');
 const buttonShowmore = document.querySelector('.grid__showmore')
 const grid__content = document.querySelector('.grid__content');
 const grid_shadow = document.querySelector('.grid_shadow');
+const achivementSection = document.querySelector('.achivement')
 
 
 hamburger.addEventListener("click", () => {
@@ -34,12 +35,12 @@ if(buttonShowmore!=null){
 }
 
 var observer = new IntersectionObserver(function (entries) {
-    // isIntersecting is true when element and viewport are overlapping
-    // isIntersecting is false when element and viewport don't overlap
     if (entries[0].isIntersecting === true)
         VanillaCounter();
 }, {
     threshold: [0]
 });
 
-observer.observe(document.querySelector(".achivement"));
+if(achivementSection != null){
+    observer.observe(document.querySelector(".achivement"));
+}
