@@ -6,8 +6,6 @@ const grid__content = document.querySelector('.grid__content');
 const grid_shadow = document.querySelector('.grid_shadow');
 
 
-
-
 hamburger.addEventListener("click", () => {
     popnav.style.display = "block";
 })
@@ -17,20 +15,20 @@ navCloseBtn.addEventListener("click", () => {
 
 
 let click = false;
-if(buttonShowmore != null){
+if(buttonShowmore!=null){
     buttonShowmore.addEventListener('click', () => {
         if (!click) {
-            grid__content.style.height = "100%";
-            grid__content.style.overflow = "hidden";
+            grid__content.classList.add('expend');
             grid_shadow.style.opacity = "0";
             buttonShowmore.textContent = "Show less";
+            buttonShowmore.style.transform = "translate(-50%, 100%)";
             click = true;
         } else {
-            grid__content.style.height = "50rem";
+            grid__content.classList.remove('expend');
             grid_shadow.style.opacity = "1";
             buttonShowmore.textContent = "Show More";
+            buttonShowmore.style.transform = "translate(-50%)";
             click = false;
-    
         }
     });
 }
