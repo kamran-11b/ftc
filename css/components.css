@@ -39,6 +39,7 @@
 /* --------- TITELBAR START --------- */
 .titlebar {
     background-color: var(--color-white);
+    padding: 2rem 0;
 }
 
 .titlebar__content {
@@ -49,7 +50,7 @@
 }
 
 .titlebar__logo {
-    width: 30rem;
+    width: 35rem;
 }
 
 
