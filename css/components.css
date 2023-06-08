@@ -398,6 +398,10 @@
     background-image: url(../img/banner/banner__australia.jpg);
     background-position: center;
 }
+.banner__world {
+    background-image: url(../img/banner/banner__world.jpg);
+    background-position: center;
+}
 
 .banner__title {
     background: rgb(0,49,105);
