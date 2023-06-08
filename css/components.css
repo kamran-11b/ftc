@@ -379,12 +379,37 @@
 .exam__banner {
     background-image: url(../img/banner/oietc.jpg);
 }
+.uk__banner {
+    background-image: url(../img/banner/banner__uk.jpg);
+}
+.danmark__banner {
+    background-image: url(../img/banner/banner__danmark.jpeg);
+    background-position: center;
+}
+.usa__banner {
+    background-image: url(../img/banner/banner__usa.jpg);
+    background-position: center;
+}
+.canada__banner {
+    background-image: url(../img/banner/banner__canada.png);
+    background-position: center;
+}
+.australia__banner {
+    background-image: url(../img/banner/banner__australia.jpg);
+    background-position: center;
+}
 
 .banner__title {
-    background-color: var(--color-primary);
+    background: rgb(0,49,105);
+    background: linear-gradient(90deg, rgba(0,49,105,1) 48%, rgba(0,212,255,0) 100%);
     display: inline-block;
     padding: 1rem;
     font-size: 5rem;
+    color: white;
+}
+
+.banner__image{
+    width: 100px;
 }
 
 /* --------- BREADCRUMB START ---------------  */
