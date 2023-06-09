@@ -182,6 +182,16 @@
         grid-template-columns: 1fr;
     }
 
+    .grid__content{
+        grid-template-columns: 1fr;
+    }
+    .grid__showmore{
+        padding: 1.5rem 4rem;
+    }
+    .grid__showmore:hover {
+        padding: 1.5rem 4rem;
+    }
+
     /* FOOTER  START  */
     .footer__sections {
         grid-template-columns: 1fr;
